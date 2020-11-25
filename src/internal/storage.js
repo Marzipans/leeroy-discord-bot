@@ -22,10 +22,14 @@ export default {
 
     obtain: async (context, collection, def) => {
         let data = cache[cacheKey(context, collection)]
+        if (data) {
+            return data;
+        }
+
         if (!db) {
             log(context, 'database is not initialized!')
-            return data
         }
+        else
         if (!data) {
             const doc = await db
                 .collection(collection)

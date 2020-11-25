@@ -1,6 +1,6 @@
 import { readFileSync } from 'fs'
-import { obtain as language } from '../features/settings/language'
-import * as server from '../features/settings/server'
+import { obtain as language } from '../features/settings/language.js'
+import * as server from '../features/settings/server.js'
 
 export const TOKEN = process.env.leeroy_auth_token
 

@@ -1,4 +1,4 @@
-import { PREFIX } from "../internal/config"
+import { PREFIX } from "../internal/config.js"
 
 export default async function (bot) {
     bot.user.setPresence({ game: {

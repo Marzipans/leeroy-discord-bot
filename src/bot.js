@@ -1,10 +1,10 @@
 import discord from 'discord.js'
-import message from './events/message'
-import reaction from './events/reaction'
-import ready from './events/ready'
-import voice from './events/voice'
-import { TOKEN } from './internal/config'
-import event from './internal/event'
+import message from './events/message.js'
+import reaction from './events/reaction.js'
+import ready from './events/ready.js'
+import voice from './events/voice.js'
+import { TOKEN } from './internal/config.js'
+import event from './internal/event.js'
 
 console.log('Initializing bot...')
 

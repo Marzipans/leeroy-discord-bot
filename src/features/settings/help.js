@@ -1,8 +1,8 @@
-import groups from '../../internal/groups'
-import colors from '../../internal/colors'
-import { Server, VERSION } from '../../internal/config'
-import { REQUIRED as REQUIRED_PERMISSIONS } from '../../internal/permissions'
-import { message } from '../../utils/response'
+import groups from '../../internal/groups.js'
+import colors from '../../internal/colors.js'
+import { Server, VERSION } from '../../internal/config.js'
+import { REQUIRED as REQUIRED_PERMISSIONS } from '../../internal/permissions.js'
+import { message } from '../../utils/response.js'
 
 export default {
     name: 'help',

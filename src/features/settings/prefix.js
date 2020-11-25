@@ -1,8 +1,8 @@
-import groups from '../../internal/groups'
-import P from '../../internal/permissions'
-import { man } from './man'
-import { Server, PREFIX } from '../../internal/config'
-import { success, error } from '../../utils/response'
+import groups from '../../internal/groups.js'
+import P from '../../internal/permissions.js'
+import { man } from './man.js'
+import { Server, PREFIX } from '../../internal/config.js'
+import { success, error } from '../../utils/response.js'
 
 const MAX_LENGTH = 5
 

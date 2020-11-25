@@ -1,11 +1,11 @@
-import { GuildMember } from 'discord.js'
-import channel from '../../internal/channel'
-import event from '../../internal/event'
-import groups from '../../internal/groups'
-import P from '../../internal/permissions'
-import { register } from '../../internal/register'
-import { log, success } from '../../utils/response'
-import { man } from '../settings/man'
+import discord from 'discord.js'
+import channel from '../../internal/channel.js'
+import event from '../../internal/event.js'
+import groups from '../../internal/groups.js'
+import P from '../../internal/permissions.js'
+import { register } from '../../internal/register.js'
+import { log, success } from '../../utils/response.js'
+import { man } from '../settings/man.js'
 
 register('dynvoice', channel.voice, event.onJoinVoice)
 register('dynvoice', channel.voice, event.onLeaveVoice)
@@ -74,11 +74,11 @@ function _template(member, template) {
         .replace('<game>', member.playing(member.t))
 }
 
-GuildMember.prototype.name = function() {
+discord.GuildMember.prototype.name = function() {
     return this.nickname ? this.nickname : this.user.username
 }
 
-GuildMember.prototype.playing = function(t) {
+discord.GuildMember.prototype.playing = function(t) {
     const playing = this.presence.activities.find(e => e.type === 0)
     return playing ? playing.name : t('dynvoice.chill')
 }
